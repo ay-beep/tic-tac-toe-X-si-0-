@@ -20,3 +20,14 @@ tablă 3x3.
 - **GameEngine** — motorul jocului, coordonează tabla, jucătorii și logica de joc.
 - **Renderer** — responsabil cu afișarea tablei în consolă.
 - **Listener** — responsabil cu citirea input-ului de la jucător.
+- ## Construirea proiectului
+
+Pentru a construi proiectul, se folosește comanda:
+
+make
+
+Pentru a șterge fișierele create la compilare, se folosește comanda:
+
+make clean
+
+După construirea proiectului se obține fișierul executabil TicTacToe.exe.
