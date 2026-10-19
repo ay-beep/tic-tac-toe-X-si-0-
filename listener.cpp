@@ -4,6 +4,6 @@
 Point Listener::GetMove() {
     Point p;
     std::cout << "Introduceti rand si coloana (0-2 0-2): ";
-    std::cin >> p.row >> p.col;
+    std::cin >> p.x >> p.y; 
     return p;
 }
