@@ -32,6 +32,7 @@ Pentru a șterge fișierele create la compilare, se folosește comanda:
 make clean
 
 După construirea proiectului se obține fișierul executabil TicTacToe.exe.
+
 Lab03 
 
 Am implementat cerintele pentru Laboratorul 3:
