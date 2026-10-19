@@ -1,6 +1,7 @@
 #include "board.hpp"
 
 Board::Board() {
+<<<<<<< HEAD
     for (int i = 0; i < 3; i++) {
         for (int j = 0; j < 3; j++) {
             _cells[i][j] = ' ';
@@ -14,6 +15,11 @@ Board::Board(const Board &other) {
             _cells[i][j] = other._cells[i][j];
         }
     }
+=======
+    for (int i = 0; i < 3; i++)
+        for (int j = 0; j < 3; j++)
+            _cells[i][j] = ' ';
+>>>>>>> origin/main
 }
 
 void Board::PlaceSymbol(int row, int col, char symbol) {
@@ -29,6 +35,7 @@ char Board::GetCell(int row, int col) const {
 }
 
 bool Board::IsFull() const {
+<<<<<<< HEAD
     for (int i = 0; i < 3; i++) {
         for (int j = 0; j < 3; j++) {
             if (_cells[i][j] == ' ')
@@ -74,4 +81,11 @@ std::ostream &operator<<(std::ostream &out, const Board &board) {
         out << "\n";
     }
     return out;
+=======
+    for (int i = 0; i < 3; i++)
+        for (int j = 0; j < 3; j++)
+            if (_cells[i][j] == ' ')
+                return false;
+    return true;
+>>>>>>> origin/main
 }

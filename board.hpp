@@ -1,4 +1,5 @@
 #pragma once
+<<<<<<< HEAD
 #include <iostream>
 
 class Board {
@@ -18,3 +19,15 @@ public:
 
 std::istream& operator >> (std::istream& in, Board& board);
 std::ostream& operator << (std::ostream& out, const Board& board);
+=======
+
+class Board {
+   char _cells[3][3];
+public:
+   Board();
+   void PlaceSymbol(int row, int col, char symbol);
+   bool IsCellEmpty(int row, int col) const;
+   char GetCell(int row, int col) const;
+   bool IsFull() const;
+};
+>>>>>>> origin/main
