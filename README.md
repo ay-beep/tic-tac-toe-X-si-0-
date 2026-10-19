@@ -1,5 +1,5 @@
 # Tic-Tac-Toe (X și O)
-
+## Lab01
 ## Descrierea proiectului
 Joc clasic Tic-Tac-Toe pentru 2 jucători, jucat în consolă. Jucătorii 
 introduc pe rând coordonatele unde vor să plaseze simbolul lor pe o 
@@ -22,6 +22,7 @@ tablă 3x3.
 - **Listener** — responsabil cu citirea input-ului de la jucător.
 - ## Construirea proiectului
 
+## Lab02
 Pentru a construi proiectul, se folosește comanda:
 
 make
@@ -31,3 +32,14 @@ Pentru a șterge fișierele create la compilare, se folosește comanda:
 make clean
 
 După construirea proiectului se obține fișierul executabil TicTacToe.exe.
+
+### Lab03
+
+Am implementat cerințele pentru Laboratorul 3:
+
+* Am adăugat constructorii și operatorii pentru clasa `Point` (`=`, `==`, `>>`, `<<`)
+* Am adăugat constructorii și operatorii pentru clasa `Board` (`=`, `==`, `>>`, `<<`)
+* Am creat clasa abstractă `AbstractPainter` și clasa `Painter` care o moștenește
+* Am adaptat `listener.cpp` pentru noile câmpuri `x` și `y` din `Point`
+
+
