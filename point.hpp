@@ -1,5 +1,4 @@
 #pragma once
-<<<<<<< HEAD
 #include <iostream>
 
 struct Point {
@@ -15,10 +14,3 @@ struct Point {
 
 std::istream& operator >> (std::istream& in, Point& point);
 std::ostream& operator << (std::ostream& out, const Point& point);
-=======
-
-struct Point {
-   int row;
-   int col;
-};
->>>>>>> origin/main
