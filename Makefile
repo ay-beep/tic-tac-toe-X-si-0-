@@ -1,28 +1,29 @@
-all: TicTacToe
+CXX = g++
+CXXFLAGS = -std=c++17 -Wall
 
-TicTacToe: board.o game_engine.o listener.o player.o point.o renderer.o main.o
-	g++ -o TicTacToe.exe board.o game_engine.o listener.o player.o point.o renderer.o main.o
+# Fișierele obiect pentru biblioteca statică (clasele de date)
+LIB_OBJS = point.o player.o board.o
+LIB_NAME = libgame.a
 
-board.o:
-	g++ board.cpp -o board.o -c
+# Fișierele obiect pentru restul aplicației
+APP_OBJS = main.o game_engine.o listener.o painter.o renderer.o
 
-game_engine.o:
-	g++ game_engine.cpp -o game_engine.o -c
+TARGET = TicTacToe.exe
 
-listener.o:
-	g++ listener.cpp -o listener.o -c
+all: $(TARGET)
 
-player.o:
-	g++ player.cpp -o player.o -c
+# Regula pentru crearea bibliotecii statice
+$(LIB_NAME): $(LIB_OBJS)
+	ar rcs $@ $^
 
-point.o:
-	g++ point.cpp -o point.o -c
+# Regula pentru generarea executabilului legând biblioteca statică
+$(TARGET): $(APP_OBJS) $(LIB_NAME)
+	$(CXX) $(CXXFLAGS) -o $@ $(APP_OBJS) $(LIB_NAME)
 
-renderer.o:
-	g++ renderer.cpp -o renderer.o -c
+# Regula generală de compilare pentru fișiere .cpp
+%.o: %.cpp
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 
-main.o:
-	g++ main.cpp -o main.o -c
-
+# Curățarea fișierelor generate
 clean:
-	rm -f *.o *.exe
+	rm -f *.o $(LIB_NAME) $(TARGET)
