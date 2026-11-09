@@ -63,14 +63,15 @@ Am implementat cerințele pentru Laboratorul 3:
 După construirea proiectului se obține fișierul executabil `TicTacToe.exe`.
 
 ---
+---
 
-## Lab03
+## Lab04
 
-Am implementat cerințele pentru Laboratorul 3:
 
-* Am adăugat constructorii și operatorii pentru clasa `Point` (`=`, `==`, `>>`, `<<`)
-* Am adăugat constructorii și operatorii pentru clasa `Board` (`=`, `==`, `>>`, `<<`)
-* Am creat clasa abstractă `AbstractPainter` și clasa `Painter` care o moștenește
-* Am adaptat `listener.cpp` pentru noile câmpuri `x` și `y` din `Point`
+ Am înlocuit tablourile clasice cu containere `std::vector` pentru gestionarea tablei de joc.
+ Am integrat funcții din biblioteca STL `<algorithm>` (cum ar fi `std::find`).
+ Am folosit `std::string` pentru manipularea textelor și șirurilor de caractere.
+ Am utilizat pointeri inteligenți și referințe pentru un management mai sigur al memoriei.
+ Am adaptat `listener.cpp` pentru noile câmpuri `x` și `y` din `Point`
 
->>>>>>> a42d09edcf453b19a8510002b78ba564efc74550
+
