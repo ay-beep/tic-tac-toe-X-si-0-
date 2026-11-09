@@ -3,6 +3,6 @@
 
 class Painter : public AbstractPainter {
 public:
-   virtual void DrawImage(Point topLeft, Point bottomRight, char** image) override {}
-   virtual void WriteText(Point position, char text) override {}
+    void DrawImage(Point topLeft, Point bottomRight, const std::vector<std::string>& image) override {}
+    void WriteText(Point position, const std::string& text) override {}
 };

@@ -1,9 +1,9 @@
 #pragma once
-
 #include <iostream>
+#include <vector>
 
 class Board {
-    char _cells[3][3];
+    std::vector<std::vector<char>> _cells;
 public:
     Board();
     Board(const Board& other);
@@ -13,7 +13,7 @@ public:
     char GetCell(int row, int col) const;
     bool IsFull() const;
 
-    Board operator=(const Board& other);
+    Board& operator=(const Board& other);
     bool operator==(const Board& other) const;
 };
 
