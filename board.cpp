@@ -1,16 +1,9 @@
 #include "board.hpp"
+#include <algorithm>
 
-Board::Board() {
-    for (int i = 0; i < 3; i++)
-        for (int j = 0; j < 3; j++)
-            _cells[i][j] = ' ';
-}
+Board::Board() : _cells(3, std::vector<char>(3, ' ')) {}
 
-Board::Board(const Board& other) {
-    for (int i = 0; i < 3; i++)
-        for (int j = 0; j < 3; j++)
-            _cells[i][j] = other._cells[i][j];
-}
+Board::Board(const Board& other) : _cells(other._cells) {}
 
 void Board::PlaceSymbol(int row, int col, char symbol) {
     _cells[row][col] = symbol;
@@ -25,31 +18,29 @@ char Board::GetCell(int row, int col) const {
 }
 
 bool Board::IsFull() const {
-    for (int i = 0; i < 3; i++)
-        for (int j = 0; j < 3; j++)
-            if (_cells[i][j] == ' ')
-                return false;
+    for (const auto& row : _cells) {
+        // Utilizarea algoritmului STL std::find pentru căutare
+        if (std::find(row.begin(), row.end(), ' ') != row.end()) {
+            return false;
+        }
+    }
     return true;
 }
 
-Board Board::operator=(const Board& other) {
-    for (int i = 0; i < 3; i++)
-        for (int j = 0; j < 3; j++)
-            _cells[i][j] = other._cells[i][j];
+Board& Board::operator=(const Board& other) {
+    if (this != &other) {
+        _cells = other._cells; // Copiere STL sigură
+    }
     return *this;
 }
 
 bool Board::operator==(const Board& other) const {
-    for (int i = 0; i < 3; i++)
-        for (int j = 0; j < 3; j++)
-            if (_cells[i][j] != other._cells[i][j])
-                return false;
-    return true;
+    return _cells == other._cells;
 }
 
 std::istream& operator>>(std::istream& in, Board& board) {
-    for (int i = 0; i < 3; i++) {
-        for (int j = 0; j < 3; j++) {
+    for (int i = 0; i < 3; ++i) {
+        for (int j = 0; j < 3; ++j) {
             char c;
             in >> c;
             board.PlaceSymbol(i, j, c);
@@ -59,8 +50,8 @@ std::istream& operator>>(std::istream& in, Board& board) {
 }
 
 std::ostream& operator<<(std::ostream& out, const Board& board) {
-    for (int i = 0; i < 3; i++) {
-        for (int j = 0; j < 3; j++) {
+    for (int i = 0; i < 3; ++i) {
+        for (int j = 0; j < 3; ++j) {
             out << board.GetCell(i, j) << " ";
         }
         out << "\n";

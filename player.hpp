@@ -1,5 +1,7 @@
 #pragma once
+#include <string>
 
 struct Player {
-   char symbol; // 'X' sau 'O'
+    std::string name;
+    char symbol; // 'X' sau 'O'
 };
