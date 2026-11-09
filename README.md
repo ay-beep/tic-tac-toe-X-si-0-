@@ -1,18 +1,18 @@
 ## Lab01
 
-<<<<<<< HEAD
+
 ### Descrierea proiectului
 
 Joc clasic Tic-Tac-Toe pentru 2 jucători, jucat în consolă. Jucătorii introduc pe rând coordonatele unde vor să plaseze simbolul lor pe o tablă 3x3.
 
-=======
+
 ## Lab01
 
 ### Descrierea proiectului
 
 Joc clasic Tic-Tac-Toe pentru 2 jucători, jucat în consolă. Jucătorii introduc pe rând coordonatele unde vor să plaseze simbolul lor pe o tablă 3x3.
 
->>>>>>> a42d09edcf453b19a8510002b78ba564efc74550
+
 ### Regulile jocului
 
 * Tabla are 3x3 celule, inițial goale.
@@ -31,7 +31,7 @@ Joc clasic Tic-Tac-Toe pentru 2 jucători, jucat în consolă. Jucătorii introd
 * `Renderer` — responsabil cu afișarea tablei în consolă.
 * `Listener` — responsabil cu citirea input-ului de la jucător.
 
----
+
 
 ## Lab02
 
@@ -44,11 +44,11 @@ Pentru a construi proiectul, se folosește comanda:
 Pentru a șterge fișierele create la compilare, se folosește comanda:
 
 `make clean`
-<<<<<<< HEAD
+
 
 După construirea proiectului se obține fișierul executabil `TicTacToe.exe`.
 
----
+
 
 ## Lab03
 
@@ -58,12 +58,11 @@ Am implementat cerințele pentru Laboratorul 3:
 * Am adăugat constructorii și operatorii pentru clasa `Board` (`=`, `==`, `>>`, `<<`)
 * Am creat clasa abstractă `AbstractPainter` și clasa `Painter` care o moștenește
 * Am adaptat `listener.cpp` pentru noile câmpuri `x` și `y` din `Point`
-=======
+
 
 După construirea proiectului se obține fișierul executabil `TicTacToe.exe`.
 
----
----
+
 
 ## Lab04
 
