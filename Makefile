@@ -6,7 +6,7 @@ LIB_OBJS = point.o player.o board.o
 LIB_NAME = libgame.a
 
 # Fișierele obiect pentru restul aplicației
-APP_OBJS = main.o game_engine.o listener.o painter.o renderer.o
+APP_OBJS = main.o game_engine.o listener.o renderer.o
 
 TARGET = TicTacToe.exe
 
